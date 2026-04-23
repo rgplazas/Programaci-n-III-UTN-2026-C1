@@ -1,0 +1,203 @@
+<!--
+  @file        index.html
+  @description Página principal del repositorio Programación III – UTN.
+               Índice general de todas las clases. Funciona tanto en
+               servidor local como en GitHub Pages.
+  @subject     Programación III – UTN
+  @author      UTN-FRA
+  @version     1.0.0
+  @since       2026
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Índice general de Programación III – UTN. Clases de HTML5, CSS3 y JavaScript.">
+    <title>Programación III – UTN</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #edf2f7;
+            color: #1a202c;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+            color: #fff;
+            text-align: center;
+            padding: 4rem 1.5rem 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            opacity: 0.85;
+        }
+
+        /* ── CONTENIDO ── */
+        main {
+            flex: 1;
+            max-width: 900px;
+            width: 100%;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        main > h2 {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #2b6cb0;
+            padding-left: 0.75rem;
+        }
+
+        /* ── GRILLA DE CLASES ── */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding: 1.75rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            border-top: 4px solid #2b6cb0;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .card-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #2b6cb0;
+        }
+
+        .card h2 {
+            font-size: 1.15rem;
+            color: #2d3748;
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            color: #718096;
+            line-height: 1.55;
+            flex: 1;
+        }
+
+        .card .topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .card .topic {
+            background: #ebf8ff;
+            color: #2b6cb0;
+            border-radius: 4px;
+            font-size: 0.72rem;
+            padding: 0.2rem 0.55rem;
+            font-weight: 600;
+        }
+
+        .card .arrow {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #2b6cb0;
+            align-self: flex-end;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            text-align: center;
+            padding: 1.25rem;
+            font-size: 0.8rem;
+            color: #a0aec0;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Programación III &mdash; UTN</h1>
+        <p>Seleccioná una clase para explorar sus archivos y ejemplos</p>
+    </div>
+
+    <main>
+        <h2>Clases disponibles</h2>
+
+        <div class="grid">
+
+            <!-- Clase 01 – HTML5 -->
+            <a class="card" href="./clase01/index.html">
+                <span class="card-tag">Clase 01</span>
+                <h2>Introducción a HTML5</h2>
+                <p>Estructura semántica, multimedia, listas, tablas, formularios y contenedores.</p>
+                <div class="topics">
+                    <span class="topic">HTML5</span>
+                    <span class="topic">Semántica</span>
+                    <span class="topic">Multimedia</span>
+                </div>
+                <span class="arrow">Ver clase →</span>
+            </a>
+
+            <!-- Clase 02 – CSS3 -->
+            <a class="card" href="./clase02/index.html">
+                <span class="card-tag">Clase 02</span>
+                <h2>Introducción a CSS3</h2>
+                <p>Selectores, unidades, Flexbox, media queries, animaciones y hojas de estilo externas.</p>
+                <div class="topics">
+                    <span class="topic">CSS3</span>
+                    <span class="topic">Flexbox</span>
+                    <span class="topic">Animaciones</span>
+                </div>
+                <span class="arrow">Ver clase →</span>
+            </a>
+
+            <!-- Clase 03 – JavaScript -->
+            <a class="card" href="./clase03/index.html">
+                <span class="card-tag">Clase 03</span>
+                <h2>Introducción a JavaScript</h2>
+                <p>Variables, tipos de datos, arrays, funciones y funciones flecha (ES6+).</p>
+                <div class="topics">
+                    <span class="topic">JavaScript</span>
+                    <span class="topic">ES6+</span>
+                    <span class="topic">Arrays</span>
+                </div>
+                <span class="arrow">Ver clase →</span>
+            </a>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>UTN &mdash; Programación III &copy; 2026</p>
+    </footer>
+
+</body>
+</html>

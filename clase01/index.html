@@ -59,6 +59,32 @@
         }
 
         /* ==========================================================================
+           NAVEGACIÓN DEL ENCABEZADO
+           ========================================================================== */
+
+        header nav {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        header nav a {
+            color: #bee3f8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid #bee3f8;
+            border-radius: 4px;
+            padding: 0.3rem 0.75rem;
+        }
+
+        header nav a:hover {
+            background-color: #bee3f8;
+            color: #2b6cb0;
+        }
+
+        /* ==========================================================================
            CONTENIDO PRINCIPAL
            ========================================================================== */
         main {
@@ -179,6 +205,12 @@
     <header>
         <h1>Programación III &mdash; UTN</h1>
         <p>Clase 01 &middot; Introducción a HTML5</p>
+        <nav>
+            <!-- Enlace al índice general del repositorio -->
+            <a href="../index.html">⌂ Inicio</a>
+            <!-- Enlace a la clase siguiente -->
+            <a href="../clase02/index.html">Clase 02 →</a>
+        </nav>
     </header>
 
     <!-- ========================= CONTENIDO PRINCIPAL ========================= -->
